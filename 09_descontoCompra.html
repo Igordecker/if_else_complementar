@@ -19,7 +19,7 @@ let precoFinal;
 if (metodoDePagamento == "B") precoFinal = valor - valor/100*3;  
 else if (metodoDePagamento == "D") precoFinal = valor - valor/100*5; 
 else if (metodoDePagamento == "P") precoFinal = valor - valor/100*10;
-else document.write(`Forma de pagamento inválida`)
+else alert(`Forma de pagamento inválida`)
     //SAÍDA
 document.write(`O valor do compudor ficou R$${precoFinal}`)
 </script>
