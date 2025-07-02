@@ -10,11 +10,14 @@
     */
 
     //ENTRADA
-
+const temperaturas = Number(prompt(`Informe o valorn da temperatura em graus celcius`))
 
     //PROCESSAMENTO
-
-    
+if(temperaturas < 100) 
+document.write(`Está muito baixa`);
+else if (temperaturas <= 200) document.write(`Está baixa`);
+else if (temperaturas < 500) document.write(`Está normal`);
+else document.write(`Está muito alta)  
     //SAÍDA
 
 </script>
