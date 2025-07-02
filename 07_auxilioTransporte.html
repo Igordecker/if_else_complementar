@@ -12,11 +12,29 @@
     */
 
     //ENTRADA
+ const salario = Number(prompt(`Informe seu salário mensal:`));
+ const auxilio = prompt(`Deseja receber auxílio transporte? ("S" para sim / "N" para não):`);
+    const transporte = prompt(`Qual seu meio de transporte? ("PU" para transporte público / "PV" para veículo próprio):`);
+    // PROCESSAMENTO
+let desconto;
+let adicional;
+let salarioFinal ;
+    if (auxilio === "S" || transporte === "PV") {
+        desconto = 0.06 * salario;
+    }
 
+    if (transporte === "PV") 
+        adicional = 200;
+     else if (transporte === "PU") 
+        adicional = 150;
+     else  alert("Tipo de transporte inválido. Use 'PU' ou 'PV'.");
 
-    //PROCESSAMENTO
+    if (auxilio !== "S" && auxilio !== "N") 
+        alert("Resposta à pergunta de auxílio inválida. Use 'S' ou 'N'.");
+     else  salarioFinal = salario - desconto + adicional ;
 
-    
+        // SAÍDA
+        alert(` O desconto aplicado foi de R$${desconto.toFixed(2)} e o adicional: R$${adicional.toFixed(2)}`)
     //SAÍDA
 
 </script>

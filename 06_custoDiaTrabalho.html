@@ -15,11 +15,23 @@
     */
 
     //ENTRADA
-
+const cargo = prompt(`Informe o cargo ocupado`)
+const viagens = Number(prompt(`Quantas viagens foram realizadas por dia`));
 
     //PROCESSAMENTO
+let diaria = 100
+let valorDaDiariaFinal
+if (cargo == "motorista") {
+if (viagens <= 10)
+valorDaDiariaFinal = diaria + diaria/100*20;
+else 
+valorDaDiariaFinal = diaria + diaria/100*35;}
 
-    
+else if (cargo == "cobrador"){
+if (viagens <= 10) valorDaDiariaFinal = diaria
+else valorDaDiariaFinal = diaria+diaria/100*10
+}
+else alert(`Cargo inválido os cargos diponiveis no programa são "cobrador" e "motorista" escritos em letras minúsculas`)
     //SAÍDA
-
+document.write(`Seu cargo é ${cargo} e o valor recebido ao final das viagens será de R$${valorDaDiariaFinal}`)
 </script>

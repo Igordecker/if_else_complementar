@@ -10,11 +10,14 @@
     */
 
     //ENTRADA
-
-
+const anos = Number(prompt(`Informe em quantos anos deseja financiar o imóvel`));
+const preco = Number(prompt(`Informe o valor do imóvel`));
+const salario = Number(prompt(`Informe seu salário`));
     //PROCESSAMENTO
-
-    
+const prestacaoMensal = preco/anos/12
+const trintaporcento = salario/100*30 
+if (prestacaoMensal <= trintaporcento) document.write(`Seu financiameto foi concedido e suas paecelas custaram R$${prestacaoMensal}`)   
+else document.write(`Seu financiamento foi negado porque as parcelas ultrapassaram 30% do seu salário, suas parcelas custariam R$${prestacaoMensal}`)
     //SAÍDA
 
 </script>

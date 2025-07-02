@@ -12,11 +12,17 @@
     */
 
     //ENTRADA
-
-
+const transporteRJ = Number(prompt(`Informe o valor do transporte aéreo para o Rio de Janeiro`));
+const transporteSP = Number(prompt(`Informe o valor do transporte aéreo para São Paulo`));
+const hotelRJ = Number(prompt(`Informe o valor do hotel no Rio de Janeiro`));
+const hotelSP = Number(prompt(`Informe o valor do hotel em São Paulo`));
+const dias = Number(prompt(`Informe quantos dias deseja ficar no destino`))
     //PROCESSAMENTO
-
-    
+const totalSP = hotelSP * dias + transporteSP
+const totalRJ = hotelRJ + transporteRJ
+const melhordestino = totalSP - totalRJ
+if (melhordestino < 0) document.write(`Melhor destino será São Paulo custando R$${totalSP}`)
+else  document.write(`Melhor destino será o Rio de Janeiro custando R$${totalRJ}`)  
     //SAÍDA
 
 </script>

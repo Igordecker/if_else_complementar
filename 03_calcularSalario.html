@@ -15,11 +15,20 @@
     */
 
     //ENTRADA
-
+const salario = Number(prompt(`Informe o valor do seu salário`))
 
     //PROCESSAMENTO
+let aumento;
+if (salario <= 2000) 
+aumento = salario * 100/15;
+ else if (salario <= 4000) 
+    aumento = salario * 100/10;
+ else if (salario <= 7000)
+ aumento = salario * 100/7.5;
+ else aumento = salario * 100/5;
+const novoSalario = salario + aumento;
 
-    
     //SAÍDA
+document.write(`O seu novo salário é R$${novoSalario.toFixed(2)}`);
 
 </script>

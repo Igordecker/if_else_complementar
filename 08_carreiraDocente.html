@@ -19,11 +19,16 @@
     */
 
     //ENTRADA
-
-
+ let anosCarreira = Number(prompt(`Informe quantos anos de carreira ovcê possui`));
+ let projetosPesquisa = Number(prompt(`Informe quantos projetos de pesquisa você já coordenou`));
+ let projerosExtensao = Number(prompt(`Informe quantos projetos de extensão você já orientou`))
+ let tcc = Number(prompt(`Informe quantos TCCs você já orientou`))
     //PROCESSAMENTO
+const pontos = anosCarreira * 2.5 + projerosExtensao * 5 + projetosPesquisa * 5 + tcc * 3;
 
     
     //SAÍDA
-
+if (pontos <= 30) document.write(`O professor tem ${pontos} pontos e considerado convidado`)
+else if (pontos <= 50) document.write(`O professor tem ${pontos} pontos e considerado agregado`)
+else  document.write(`O professor tem ${pontos} pontos e considerado titular`)
 </script>
